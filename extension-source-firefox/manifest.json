@@ -1,0 +1,21 @@
+{
+  "name": "Botwiki Browser Extension",
+  "description" : "A browser extension that adds a link to a bot's Botwiki entry on relevant pages.",
+  "homepage_url": "https://fourtonfish.com/project/github-organization-issues-link-chrome-extension/",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "*://*.botwiki.org/*",
+    "webRequest"
+  ],
+  "content_scripts": [{
+    "js": ["scripts/content.js"],
+    "matches": ["*://*.twitter.com/*","*://*.botsin.space/*"]
+  }],
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  }
+}

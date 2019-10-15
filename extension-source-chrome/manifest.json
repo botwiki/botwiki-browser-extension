@@ -2,7 +2,7 @@
   "name": "Botwiki Browser Extension",
   "description" : "A browser extension that adds a link to a bot's Botwiki entry on relevant pages.",
   "permissions": ["declarativeContent","activeTab"],
-  "version": "1.0",
+  "version": "1.0.2",
   "manifest_version": 2,
   "content_scripts": [{
     "css": ["styles/styles.css"],

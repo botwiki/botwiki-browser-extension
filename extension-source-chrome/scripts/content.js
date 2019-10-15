@@ -9,7 +9,7 @@ function ready( fn ) {
 ready( function(){
   setTimeout( function(){
   let accountUrl = window.location.href;
-  if ( accountUrl ){
+  if ( accountUrl && accountUrl !== 'https://twitter.com/home' ){
       const apiCallURL = `https://botwiki.org/wp-json/wp/v2/bot?bot_url=${ accountUrl }`;
 
       fetch( apiCallURL )

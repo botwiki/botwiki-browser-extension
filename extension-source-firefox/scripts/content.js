@@ -47,6 +47,7 @@ function searchBotwiki(){
 
             botwikiLink.setAttribute( 'href', data[0].link );
             botwikiLink.setAttribute( 'target', '_blank' );
+            botwikiLink.style = 'vertical-align:top;';
             botwikiLink.innerHTML = 'View on Botwiki';
 
             linkClasses.forEach( function( className ){

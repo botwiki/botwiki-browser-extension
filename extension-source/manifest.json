@@ -1,6 +1,6 @@
 {
     "name": "Botwiki Browser Extension",
-    "version": "1.1.0",
+    "version": "1.1.3",
     "description": "A browser extension that adds a link to a bot's Botwiki entry on relevant pages.",
     "homepage_url": "https://botwiki.org/projects/botwiki-browser-extension/",
     "manifest_version": 2,
@@ -31,7 +31,7 @@
         "scripts/main.js",
         "scripts/modules/addBotwikiLink.js",
         "scripts/modules/findBot.js",
-        "scripts/modules/getUtilities.js",
+        "scripts/modules/getBotInfo.js",
         "scripts/modules/ready.js",
         "data/*.json"
     ]

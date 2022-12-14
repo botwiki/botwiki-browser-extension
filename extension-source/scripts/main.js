@@ -1,15 +1,16 @@
 import ready from './modules/ready.js';
+import getBotInfo from './modules/getBotInfo.js';
 import findBot from './modules/findBot.js';
 import addBotwikiLink from './modules/addBotwikiLink.js';
 
 ready(() => {
     setTimeout(() => {
-        const accountUrl = window.location.href;
-        findBot(accountUrl).then((data) => {
+        const botInfo = getBotInfo(window.location.href);
+        findBot(botInfo.botUrl).then((data) => {
+            // console.log(botInfo, data);
             if (data && data.length > 0){
-                addBotwikiLink(accountUrl, data);
+                addBotwikiLink(botInfo, data);
             }
         });
-    }, 500);
+    }, 1000);
 });
-  

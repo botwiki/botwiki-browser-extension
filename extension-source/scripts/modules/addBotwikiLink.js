@@ -1,4 +1,8 @@
+let botwikiCheckInterval = {interval: null, count: 0};
+
 const addBotwikiLink = (botInfo, botData) => {
+  clearInterval(botwikiCheckInterval.interval);
+
   if (botInfo.parentElement){
     let botwikiLink = document.createElement('a');
 
@@ -11,6 +15,8 @@ const addBotwikiLink = (botInfo, botData) => {
         botwikiLink.classList.add(className);
       });
     }
+
+    botwikiLink.classList.add('botwiki-view-bot-btn');
 
     switch (botInfo.network){
       case 'twitter':
@@ -25,6 +31,11 @@ const addBotwikiLink = (botInfo, botData) => {
         botwikiLink.style = 'vertical-align:top;';
         botInfo.parentElement.prepend(botwikiLink);
         break;
+    }
+  } else {
+    botwikiCheckInterval.count++;
+    if (botwikiCheckInterval.count > 20){
+      clearInterval(botwikiCheckInterval.interval);
     }
   }
 }

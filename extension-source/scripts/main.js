@@ -5,7 +5,7 @@ import addBotwikiLink from './modules/addBotwikiLink.js';
 
 const searchBotwiki = () => {
     try {
-        document.querySelector('botwiki-view-bot-btn').remove();
+        document.querySelectorAll(".botwiki-view-bot-btn").forEach(e => e.remove());
     } catch (error) {/* noop */}
 
     let intervalCount = 0, interval = setInterval(() => {

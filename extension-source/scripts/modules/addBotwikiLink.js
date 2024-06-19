@@ -4,6 +4,10 @@ const addBotwikiLink = (botInfo, botData) => {
   clearInterval(botwikiCheckInterval.interval);
 
   if (botInfo.parentElement){
+    try {
+        document.querySelectorAll(".botwiki-view-bot-btn").forEach(e => e.remove());
+    } catch (error) {/* noop */}
+
     let botwikiLink = document.createElement('a');
 
     botwikiLink.setAttribute('href', botData[0].link);
@@ -15,7 +19,7 @@ const addBotwikiLink = (botInfo, botData) => {
         botwikiLink.classList.add(className);
       });
     }
-
+    
     botwikiLink.classList.add('botwiki-view-bot-btn');
 
     switch (botInfo.network){

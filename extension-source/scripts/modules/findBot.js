@@ -1,7 +1,7 @@
 export default async (accountUrl) => {
     try {
-        if (accountUrl && accountUrl !== 'https://twitter.com/home'){
-            const requestURL = `https://botwiki.org/wp-json/wp/v2/bot?bot_url=${ accountUrl }`;
+        if (accountUrl && accountUrl !== 'https://x.com/home'){
+            const requestURL = `https://botwiki.org/wp-json/wp/v2/bot?bot_urls=${ accountUrl }`;
             const resp = await fetch(requestURL);
             const data = await resp.json();
             return data;

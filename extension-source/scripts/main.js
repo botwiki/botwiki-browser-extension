@@ -4,10 +4,6 @@ import findBot from './modules/findBot.js';
 import addBotwikiLink from './modules/addBotwikiLink.js';
 
 const searchBotwiki = () => {
-    try {
-        document.querySelectorAll(".botwiki-view-bot-btn").forEach(e => e.remove());
-    } catch (error) {/* noop */}
-
     let intervalCount = 0, interval = setInterval(() => {
         const botInfo = getBotInfo(window.location.href);
         if (botInfo.botUrl){

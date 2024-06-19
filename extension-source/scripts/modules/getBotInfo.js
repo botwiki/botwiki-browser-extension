@@ -14,7 +14,7 @@ const getParentElement = (selectors) => {
 
 const getBotInfo = (accountUrl) => {
   let botUrl, network, parentElement, linkClasses = [];
-  if (accountUrl.indexOf('twitter.com/') !== -1){
+  if (accountUrl.indexOf('x.com/') !== -1){
     network = 'twitter';
     botUrl = accountUrl;
     const twitterParentElSelectors = [
